@@ -1,8 +1,10 @@
+![electrum-tao-server](https://raw.githubusercontent.com/justinvforvendetta/electrum-tao-server/master/splash.png)
+
 Electrum-Tao-Server for the Electrum client
 =========================================
 
   * Original Author: Thomas Voegtlin (ThomasV on the bitcointalk forum)
-  * Tao codebase port Authors: Sunerok
+  * Tao codebase port Author: Sunerok
   * Language: Python
 
 Features
@@ -11,6 +13,8 @@ Features
   * The server indexes UTXOs by address, in a Patricia tree structure
     described by Alan Reiner (see the 'ultimate blockchain
     compression' thread in the Bitcointalk forum)
+
+  * All of Tao's OP_CODES for present and future features to be incorporated into transactions/etc
 
   * The server requires taod, leveldb and plyvel
 
@@ -29,7 +33,6 @@ Installation
      detail on the installation process, see HOWTO.md.
 
   2. To start and stop the server, use the 'electrum-tao-server' script
-
 
 
 License
