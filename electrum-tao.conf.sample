@@ -1,0 +1,33 @@
+[server]
+# username for running the daemon
+username = electrum
+# hostname. set it to a FQDN in order to be reached from outside
+host = electrum-tao.xyz
+# ports
+electrum_rpc_port = 8000
+stratum_tcp_port = 50001
+#stratum_tcp_ssl_port = 50002
+#report_host =
+#report_stratum_tcp_port = 50001
+#report_stratum_tcp_ssl_port = 50002
+banner = Welcome to the Tao Electrum Server!
+banner_file = /etc/electrum-tao.banner
+irc = yes
+irc_nick = TaoSrv
+#ssl_certfile = /path/to/electrum-server.crt
+#ssl_keyfile = /path/to/electrum-server.key
+logfile = /var/log/electrum-tao.log
+donation_address = TgUzucR8rjdm8nDJrVHtrCK6Bbe5ZFkhZx
+
+[leveldb]
+# path to your database
+path = /home/electrum/electrum-tao-server/database
+# for each address, history will be pruned if it is longer than this limit
+pruning_limit = 1000
+
+[bitcoind]
+bitcoind_host = localhost
+bitcoind_port = 15715
+# user and password from Tao.conf
+bitcoind_user = taorpcusername
+bitcoind_password = taorpcpassword
