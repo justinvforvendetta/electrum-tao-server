@@ -1,5 +1,4 @@
 ![electrum-tao-server](https://raw.githubusercontent.com/justinvforvendetta/electrum-tao-server/master/splash.png)
-
 Electrum-Tao-Server for the Electrum client
 =========================================
 
