@@ -576,6 +576,8 @@ class BlockchainProcessor(Processor):
             i += 1
 
         postdata = dumps(rawtxreq)
+        print "postdata!!"
+        print postdata
         try:
             respdata = urllib.urlopen(self.bitcoind_url, postdata).read()
         except:
