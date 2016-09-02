@@ -245,7 +245,6 @@ def parse_Transaction(vds, is_coinbase):
     start = vds.read_cursor
     d['version'] = vds.read_int32()
     d['nTime'] = vds.read_uint32()
-    d['txComment'] = vds.read_string()
     n_vin = vds.read_compact_size()
     d['inputs'] = []
     for i in xrange(n_vin):
@@ -264,6 +263,10 @@ def parse_Transaction(vds, is_coinbase):
             d['outputs'].append(o)
 
     d['lockTime'] = vds.read_uint32()
+    if int(d['version']) > 1:
+       d['txComment'] = vds.read_string()
+    else:
+       d['txComment'] = ""
     return d
 
 #Rao src/script.h L217
