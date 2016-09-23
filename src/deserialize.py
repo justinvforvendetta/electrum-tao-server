@@ -233,6 +233,7 @@ def parse_TxIn(vds):
 def parse_TxOut(vds, i):
     d = {}
     d['value'] = vds.read_int64()
+    d['utxoid'] = vds.read_int64()
     scriptPubKey = vds.read_bytes(vds.read_compact_size())
     d['address'] = get_address_from_output_script(scriptPubKey)
     d['raw_output_script'] = scriptPubKey.encode('hex')
